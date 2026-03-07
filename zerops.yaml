@@ -25,7 +25,7 @@ zerops:
         - node_modules
 
     run:
-      # Nginx serves the prerendered output — no Node.js at runtime.
+      # Nginx serves the compiled output — no Node.js at runtime.
       # Built-in SPA fallback: unmatched routes serve /index.html,
       # so Angular Router handles client-side navigation correctly.
       base: static

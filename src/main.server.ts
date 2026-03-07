@@ -1,7 +1,3 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
-import { config } from './app/app.config.server';
-
-const bootstrap = () => bootstrapApplication(AppComponent, config);
-
-export default bootstrap;
+// Server entry — not used in pure client-side (ssr: false) builds.
+// Analog requires this file to exist as an entry point stub.
+export default () => Promise.resolve(null);
