@@ -6,7 +6,7 @@ Analog (Angular meta-framework) SPA built via Vite — static build served by ng
 
 - HTTP port: dev `5173` (Vite) / prod `80` (nginx)
 - Siblings: —
-- Runtime base: dev `nodejs@22` / prod `static`
+- Runtime base: dev `nodejs@24` / prod `static`
 
 ## Zerops dev
 
