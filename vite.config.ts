@@ -10,9 +10,14 @@ const analogVersion = JSON.parse(
 export default defineConfig({
   plugins: [
     analog({
-      // Disable SSR — produce a pure client-side SPA output.
-      // Output lands in dist/client/ which is then served by Nginx.
+      // Client-only SPA. Empty prerender routes are required — Analog still
+      // defaults prerender to ['/'], which forces an SSR Vite environment
+      // that rolls up .ts without the Angular transform and fails the build.
       ssr: false,
+      static: true,
+      prerender: {
+        routes: [],
+      },
     }),
   ],
   define: {
