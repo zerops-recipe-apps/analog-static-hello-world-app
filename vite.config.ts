@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
+import angular from '@analogjs/vite-plugin-angular';
+import nitro from '@analogjs/vite-plugin-nitro';
 import { readFileSync } from 'node:fs';
 
 // Read installed Analog version at build time
@@ -19,6 +21,8 @@ export default defineConfig({
         routes: [],
       },
     }),
+    angular(),
+    nitro(),
   ],
   define: {
     // Injected at build time — not readable at runtime (no Node.js process)
